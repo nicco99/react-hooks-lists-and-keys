@@ -112,9 +112,9 @@ Warning: Each child in a list should have a unique "key" prop.
 To fix this error, we must give each `<li>` element a special `key` prop, like so:
 
 ```jsx
-const colorElements = colors.map((color) => {
+const colorElements = colors.map((color, index) => {
   return (
-    <li key={color} style={{ color: color }}>
+    <li key={index} style={{ color: color }}>
       {color}
     </li>
   );
